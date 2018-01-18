@@ -4,11 +4,12 @@ import pysftp
 import resources
 import shutil
 
-#Delete any files in director as script cannot overwrite
+#Delete any files in directory as script cannot overwrite
 try:
     shutil.rmtree(resources.remove_folder)
 except OSError:
     print("Folder already deleted")
+    
 #Connect to sftp
 sftp = pysftp.Connection(host=resources.URL_Host_IP, username=resources.Username, password=resources.Password)
 

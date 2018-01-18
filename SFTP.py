@@ -11,10 +11,10 @@ except OSError:
     print("Folder already deleted")
     
 #Connect to sftp
-sftp = pysftp.Connection(host=resources.URL_Host_IP, username=resources.Username, password=resources.Password)
+sftp = pysftp.Connection(host=resources.url_host, username=resources.username, password=resources.password)
 
 #Copy SFTP directory to local directory
-sftp.get_r(resources.Folder,resources.replace_folder,preserve_mtime=True)
+sftp.get_r(resources.folder,resources.replace_folder,preserve_mtime=True)
 # Closes the connection
 sftp.close()
 print("Server files copied")

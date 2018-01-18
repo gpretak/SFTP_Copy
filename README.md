@@ -1,2 +1,2 @@
 # SFTP_Copy
-Copies over files instead an SFTP directory to local drive using pysftp
+Copies over files from an SFTP directory to local directory using pysftp
